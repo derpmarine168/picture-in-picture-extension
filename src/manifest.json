@@ -3,7 +3,7 @@
   "description": "Watch video using Picture-in-Picture",
   "version": "1.1",
   "icons": {
-    "128": "assets/icon128.png"
+    "128": "assets/icon.svg"
   },
   "background": {
     "persistent": false,
@@ -11,8 +11,13 @@
   },
   "browser_action": {
     "default_icon": {
-      "19": "assets/icon19.png",
-      "38": "assets/icon38.png"
+      "16": "assets/icon.svg",
+      "32": "assets/icon.svg",
+      "128": "assets/icon.svg",
+      "19": "assets/icon.svg",
+      "38": "assets/icon.svg",
+      "48": "assets/icon.svg",
+      "512": "assets/icon.svg"
     }
   },
   "permissions": [
@@ -21,4 +26,3 @@
   "minimum_chrome_version": "69.0.3483.0",
   "manifest_version": 2
 }
-

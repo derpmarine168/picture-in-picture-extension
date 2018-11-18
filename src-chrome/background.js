@@ -35,6 +35,13 @@ if (!document.pictureInPictureEnabled) {
           }, { once: true });
         }
       })();
+      if(!window.onunload) {
+      window.onunload = async function() {
+        const video = document.querySelector('video');
+        if (video.hasAttribute('__pip__')) {
+          await document.exitPictureInPicture();
+        }
+      }}
     `;
     chrome.tabs.executeScript({ code });
   });
