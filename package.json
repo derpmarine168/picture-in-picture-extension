@@ -1,0 +1,32 @@
+{
+  "name": "picture-in-picture-extension",
+  "version": "1.0.0",
+  "description": "play your videos in picture-in-picture mode!",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint src/**/*.js",
+    "test-chrome": "eslint src-chrome/**/*.js",
+    "build": "gulp webext",
+    "build-chrome": "gulp chrome-ext"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoogleChromeLabs/picture-in-picture-chrome-extension.git"
+  },
+  "author": "Derpmarine",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GoogleChromeLabs/picture-in-picture-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/GoogleChromeLabs/picture-in-picture-chrome-extension#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "google-closure-compiler": "^20180805.0.0",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^5.0.3"
+  }
+}

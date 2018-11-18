@@ -1,6 +1,6 @@
 /**
- * @license Copyright 2018 Google LLC
- * Modified by Derpmarine
+ * @license
+ * Copyright 2018 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/* global browser */
+
+/* global chrome */
 
 if (!document.pictureInPictureEnabled) {
-  browser.browserAction.setTitle({ title: "Picture-in-Picture NOT supported" });
+  chrome.browserAction.setTitle({ title: "Picture-in-Picture NOT supported" });
 } else {
-  browser.browserAction.onClicked.addListener(tab => {
+  chrome.browserAction.onClicked.addListener(tab => {
     const code = `
       (async () => {
         const video = document.querySelector('video');
@@ -35,6 +36,6 @@ if (!document.pictureInPictureEnabled) {
         }
       })();
     `;
-    browser.tabs.executeScript({ code });
+    chrome.tabs.executeScript({ code });
   });
 }
